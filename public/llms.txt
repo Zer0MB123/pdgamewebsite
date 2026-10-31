@@ -1,0 +1,56 @@
+# Prime Domination
+
+> Prime Domination is a modern military real-time strategy (RTS) game for PC, developed by A16.
+
+## Official website
+https://YOUR-DOMAIN.com/
+
+## Game overview
+Prime Domination is a modern military RTS in which players build and expand military bases, manage their war economy, produce combined-arms forces, and command battles against AI opponents or other players. Online matches support up to 10 commanders. Players can play alone against bots or play online with friends.
+
+## Core gameplay
+- Modern military real-time strategy (RTS) gameplay
+- Base building and military infrastructure
+- Economy and finance management
+- Building upgrades and strategic resource investment
+- Military production, combined-arms tactics, and battlefield combat
+- Single-player matches against AI opponents
+- Online PvP and custom matches with human players and AI bots
+- Matches for up to 10 commanders
+- Multiple maps
+- A planned small story mode in which players defeat a sequence of generals across different maps
+
+## Factions and team choices
+There are two parent factions: the United States (USA) and Russia. Players select one specific team under a faction; choosing only the parent faction is not a playable team selection.
+
+USA teams: Vanguard, Air Superiority, Armored, and Mechanized.
+
+Russian teams: Red Army, Rocket Forces, Armored Assault, and Rapid Response.
+
+Each team is designed to have its own special power system. Players can upgrade team powers and unlock specialized capabilities, including team-exclusive aircraft or rocket options.
+
+## Military units and capabilities
+- Bulldozers and construction vehicles
+- Armored personnel carriers (APCs)
+- Infantry fighting vehicles (IFVs)
+- Main battle tanks
+- Multiple-launch rocket systems (MLRS)
+- Air-defense systems
+- Aircraft
+- Helicopters
+- Team-specific powers and exclusive military capabilities
+
+## Early Access and development
+The current target window for Early Access is March or April 2027. This is an estimate, not a confirmed release date, and may change. The goal is to launch with a substantial, playable experience that supports base building, economy management, military production, AI matches, online multiplayer, and a planned small story mode.
+
+The full-release date is not fixed. Early Access could take around two years, depending on development progress and community feedback. The game will move to full release when the experience is ready and the community is satisfied. Development priorities will be shaped with players and may include new maps, teams, units, features, balance updates, quality-of-life improvements, optimization, and further content.
+
+## Partner programme
+Prime Domination is seeking two kinds of partners: investors who can support development, growth, and marketing; and influencers, streamers, content creators, or active community members who can help share the game and grow its audience. Partner opportunities are intended to include community support, partner-run events, and further benefits as the game grows. Applications will be limited, and active partners are intended to remain part of the programme as it develops. Specific arrangements will be discussed with selected applicants.
+
+## Official destinations
+- Steam: https://store.steampowered.com/app/4900280/Prime_Domination/
+- Discord: https://discord.gg/GpGEm9ErR8
+
+## Developer and publisher
+A16

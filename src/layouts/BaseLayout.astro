@@ -1,0 +1,86 @@
+---
+const {
+  title = "Prime Domination | Modern Military RTS Game for PC",
+  description = "Prime Domination is a modern military RTS for PC. Build bases, command land and air forces, and battle AI or up to 10 players. Early Access targets 2027.",
+  canonical = "https://YOUR-DOMAIN.com/",
+  image = "https://YOUR-DOMAIN.com/images/prime-domination-social-card.jpg"
+} = Astro.props;
+const gameDescription = "Prime Domination is a modern military real-time strategy (RTS) game for PC, developed by A16. Build and expand military bases, manage your economy, produce combined-arms forces including tanks, armored vehicles, MLRS rocket systems, air defense, aircraft and helicopters, and battle AI opponents or other players in matches for up to 10 commanders. Choose from eight specialized teams across the USA and Russia, upgrade team-specific powers, play with friends or against bots, and take on a planned story mode featuring rival generals. Early Access is currently targeted for March or April 2027.";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d13" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="application-name" content="Prime Domination" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Prime Domination" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content="Prime Domination — modern military real-time strategy game for PC" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <slot name="head" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "VideoGame",
+          "@id": "https://YOUR-DOMAIN.com/#game",
+          "name": "Prime Domination",
+          "alternateName": "Prime Domination RTS",
+          "url": "https://YOUR-DOMAIN.com/",
+          "description": gameDescription,
+          "genre": ["Real-time strategy", "Military strategy", "Strategy", "Action", "Indie"],
+          "gamePlatform": "PC",
+          "operatingSystem": "Windows 10 64-bit, Windows 11 64-bit",
+          "applicationCategory": "Game",
+          "playMode": ["SinglePlayer", "MultiPlayer"],
+          "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 10 },
+          "publisher": { "@id": "https://YOUR-DOMAIN.com/#developer" },
+          "author": { "@id": "https://YOUR-DOMAIN.com/#developer" },
+          "inLanguage": "en",
+          "keywords": "Prime Domination, RTS, real-time strategy, military RTS, modern military strategy game, base building, war strategy game, tank combat, online multiplayer strategy, PC strategy game",
+          "sameAs": ["https://store.steampowered.com/app/4900280/Prime_Domination/", "https://discord.gg/GpGEm9ErR8"]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://YOUR-DOMAIN.com/#developer",
+          "name": "A16",
+          "url": "https://YOUR-DOMAIN.com/",
+          "sameAs": ["https://store.steampowered.com/app/4900280/Prime_Domination/", "https://discord.gg/GpGEm9ErR8"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://YOUR-DOMAIN.com/#website",
+          "url": "https://YOUR-DOMAIN.com/",
+          "name": "Prime Domination Official Website",
+          "description": description,
+          "publisher": { "@id": "https://YOUR-DOMAIN.com/#developer" },
+          "inLanguage": "en"
+        }
+      ]
+    })} />
+  </head>
+  <body>
+    <slot />
+    <script>
+      import "../scripts/site.js";
+    </script>
+  </body>
+</html>

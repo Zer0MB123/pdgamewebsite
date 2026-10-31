@@ -1,0 +1,272 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const steamUrl = "https://store.steampowered.com/app/4900280/Prime_Domination/";
+const discordUrl = "https://discord.gg/GpGEm9ErR8";
+// Add the Google Sheets application URL when it is ready.
+const partnerApplicationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfLimSnJ0BYIIfXl9tTu-7Aoch1E8GPmasMhX0-ZIY9iBl0Hg/viewform?usp=header";
+const features = [
+  { n: "01", title: "Establish your command", text: "Start with the essentials, then turn open ground into a fully functioning military base. Place key structures, expand your footprint, and prepare for the fight ahead.", tag: "BASE BUILDING" },
+  { n: "02", title: "Build an economy that can sustain war", text: "Manage your finances, invest in income-generating structures, and decide when to expand, upgrade, or commit resources to your army.", tag: "ECONOMY & UPGRADES" },
+  { n: "03", title: "Produce. Adapt. Advance.", text: "Build a combined force of armored vehicles, infantry carriers, artillery, air-defense systems, aircraft, and helicopters. Choose the tools that suit your plan.", tag: "MILITARY PRODUCTION" },
+];
+---
+<BaseLayout>
+  <main>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Prime Domination home">
+        <span class="brand-mark">P<span>D</span></span>
+        <span class="brand-name">PRIME <b>DOMINATION</b></span>
+      </a>
+      <div class="nav-links">
+        <a href="#gameplay">Gameplay</a>
+        <a href="#factions">Factions</a>
+        <a href="#arsenal">Arsenal</a>
+        <a href="#media">Media</a>
+        <a href="#partners">Partners</a>
+      </div>
+      <a class="nav-cta" href={steamUrl} target="_blank" rel="noopener noreferrer">VIEW ON STEAM <span>↗</span></a>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"><i></i><i></i></button>
+    </nav>
+
+    <section class="hero" id="top">
+      <div class="hero-video-wrap" aria-hidden="true">
+        <img class="hero-game-image" src="/images/game/image1.png" alt="Prime Domination modern military RTS battlefield gameplay" />
+        <video class="hero-video" autoplay muted loop playsinline poster="/images/hero-poster.svg">
+          <source src="/videos/prime-domination-trailer.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="pulse"></span> MODERN MILITARY REAL-TIME STRATEGY</div>
+        <h1>COMMAND.<br/><em>BUILD.</em><br/>DOMINATE.</h1>
+        <p class="hero-copy">The battlefield is yours to shape. Build your base, command your forces, and outthink the opposition in a modern military RTS built around strategy, scale, and control.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href={steamUrl} target="_blank" rel="noopener noreferrer">DISCOVER ON STEAM <span>↗</span></a>
+          <a class="button button-ghost" href="#gameplay"><span class="play-icon">▶</span> EXPLORE THE GAME</a>
+        </div>
+        <div class="hero-facts">
+          <div><strong>10</strong><span>COMMANDERS<br/>PER MATCH</span></div>
+          <div><strong>8</strong><span>PLAYABLE<br/>Teams</span></div>
+          <div><strong>∞</strong><span>WAYS TO<br/>APPROACH WAR</span></div>
+        </div>
+      </div>
+      <div class="hero-side-note">A16 <span> / </span> PC STRATEGY</div>
+      <a class="scroll-cue" href="#briefing"><span></span> SCROLL TO BRIEFING</a>
+      <div class="hero-coordinate">FIELD OPERATIONS // 001</div>
+    </section>
+
+    <section class="briefing section-pad" id="briefing">
+      <div class="section-kicker reveal"><span>01</span> / THE MISSION</div>
+      <div class="briefing-layout">
+        <div class="briefing-heading reveal">
+          <p class="micro-label">A NEW COMMAND BEGINS</p>
+          <h2>THE NEXT MOVE<br/>IS <em>YOURS.</em></h2>
+        </div>
+        <div class="briefing-text reveal">
+          <p class="lead">Prime Domination is a modern military real-time strategy (RTS) game for PC, combining base building, war-economy management, and combined-arms warfare. Every decision shapes the battle.</p>
+          <p>Establish your headquarters, expand your base, manage your finances, and produce a force capable of holding the line—or breaking through it. Take on AI opponents or enter online battles with other commanders. With matches supporting up to 10 players, every battlefield becomes a contest of planning, timing, and tactical decisions.</p>
+          <a class="text-link" href="#gameplay">EXPLORE THE GAMEPLAY <span>↘</span></a>
+        </div>
+      </div>
+      <div class="briefing-strip reveal">
+        <div><span class="strip-number">01</span><b>BUILD</b><small>Establish your base</small></div>
+        <div><span class="strip-number">02</span><b>MANAGE</b><small>Grow your economy</small></div>
+        <div><span class="strip-number">03</span><b>DEPLOY</b><small>Produce your forces</small></div>
+        <div><span class="strip-number">04</span><b>DOMINATE</b><small>Control the battlefield</small></div>
+      </div>
+    </section>
+
+    <section class="gameplay section-pad" id="gameplay">
+      <div class="section-kicker reveal"><span>02</span> / THE ART OF COMMAND</div>
+      <div class="section-title-row reveal">
+        <h2>PLAN THE WAR.<br/><em>CONTROL THE OUTCOME.</em></h2>
+        <p>Victory starts long before the first shot. Build with purpose, invest wisely, and create a force that can answer the challenges ahead.</p>
+      </div>
+      <div class="feature-stack">
+        {features.map((f, i) => (
+          <article class={`feature-card feature-${i + 1} reveal`}>
+            <div class="feature-visual">
+              <img class="section-game-image" src={`/images/game/image${i + 2}.png`} alt={i === 0 ? "Prime Domination military base construction gameplay" : i === 1 ? "Prime Domination economy and base management gameplay" : "Prime Domination combined-arms unit production gameplay"} />
+              <div class="visual-orbit orbit-a"></div><div class="visual-orbit orbit-b"></div>
+              <div class="visual-crosshair">+</div>
+              <div class="visual-index">{f.n}</div>
+              <div class="visual-word">{i === 0 ? "CONSTRUCT" : i === 1 ? "SUSTAIN" : "DEPLOY"}</div>
+              <div class="visual-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="feature-copy">
+              <span class="micro-label">{f.tag}</span>
+              <h3>{f.title}</h3>
+              <p>{f.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="factions section-pad" id="factions">
+      <div class="section-kicker reveal"><span>03</span> / CHOOSE YOUR SIDE</div>
+      <div class="section-title-row reveal">
+        <h2>TWO FACTIONS.<br/><em>YOUR STRATEGY.</em></h2>
+        <p>Choose the USA or Russia, then select one of four specialized teams within that faction. Each team brings its own identity, tactical strengths, and battlefield possibilities.</p>
+      </div>
+      <p class="faction-intro">Choose one of eight specialized team types. You select a team under the USA or Russia—not the parent faction on its own.</p>
+      <div class="faction-grid">
+        <article class="faction-card usa reveal">
+          <div class="faction-top"><span>FACTION 01</span><span>UNITED STATES</span></div>
+          <div class="faction-art art-usa"><img class="section-game-image" src="/images/game/image5.png" alt="United States faction army in Prime Domination" /><div class="art-sun"></div><div class="art-horizon"></div><div class="tank-silhouette"><i></i></div><span class="faction-code">US</span></div>
+          <div class="faction-bottom"><div><h3>UNITED STATES</h3><p>Four specialized teams to choose from.</p></div><span class="faction-arrow">↗</span></div>
+          <div class="subteam-panel"><div class="subteam-heading"><span>AVAILABLE TEAMS</span><span>01—04</span></div><ul class="subteam-list"><li><span>01</span><b>Vanguard</b></li><li><span>02</span><b>Air Superiority</b></li><li><span>03</span><b>Armored</b></li><li><span>04</span><b>Mechanized</b></li></ul></div>
+        </article>
+        <article class="faction-card russia reveal">
+          <div class="faction-top"><span>FACTION 02</span><span>RUSSIA</span></div>
+          <div class="faction-art art-russia"><img class="section-game-image" src="/images/game/image6.png" alt="Russian faction army in Prime Domination" /><div class="art-sun"></div><div class="art-horizon"></div><div class="tank-silhouette"><i></i></div><span class="faction-code">RU</span></div>
+          <div class="faction-bottom"><div><h3>RUSSIA</h3><p>Four specialized teams to choose from.</p></div><span class="faction-arrow">↗</span></div>
+          <div class="subteam-panel"><div class="subteam-heading"><span>AVAILABLE TEAMS</span><span>01—04</span></div><ul class="subteam-list"><li><span>01</span><b>Red Army</b></li><li><span>02</span><b>Rocket Forces</b></li><li><span>03</span><b>Armored Assault</b></li><li><span>04</span><b>Rapid Response</b></li></ul></div>
+        </article>
+      </div>
+      <p class="faction-note">At the start of a match, choose one specific team from either faction. Each team is designed to have its own special power system. Upgrade your team’s power to strengthen its effects and unlock specialized capabilities, including exclusive aircraft or rocket options that are not available to every team. Team details and balance may evolve during development.</p>
+    </section>
+
+    <section class="multiplayer section-pad">
+      <div class="multi-backdrop"><img src="/images/game/image7.png" alt="Prime Domination multiplayer battlefield with multiple commanders" /></div>
+      <div class="multi-content reveal">
+        <div class="section-kicker"><span>04</span> / THE BATTLEFIELD</div>
+        <p class="micro-label">MORE COMMANDERS. MORE POSSIBILITIES.</p>
+        <h2>UP TO <em>10</em><br/>IN COMMAND.</h2>
+        <p>Take the fight to AI opponents, challenge other players online, or create custom matches that mix human commanders and bots. Every commander brings another variable to the battlefield.</p>
+        <div class="multi-stats"><div><strong>01—10</strong><span>COMMANDERS</span></div><div><strong>AI + PvP</strong><span>WAYS TO PLAY</span></div><div><strong>ONLINE</strong><span>MULTIPLAYER</span></div></div>
+        <a class="button button-primary" href={steamUrl} target="_blank" rel="noopener noreferrer">FOLLOW DEVELOPMENT ON STEAM <span>↗</span></a>
+      </div>
+      <div class="multi-watermark">10</div>
+    </section>
+
+    <section class="arsenal section-pad" id="arsenal">
+      <div class="section-kicker reveal"><span>05</span> / THE ARSENAL</div>
+      <div class="section-title-row reveal">
+        <h2>BUILD YOUR<br/><em>COMBAT FORCE.</em></h2>
+        <p>Build a combined-arms force across land and air. From construction vehicles and armored formations to rocket artillery, air defense, aircraft, and helicopters, your force must match your strategy.</p>
+      </div>
+      <div class="arsenal-grid">
+        <div class="arsenal-item reveal"><span class="arsenal-no">01 / ENGINEERING</span><div class="unit-symbol">⌑</div><h3>BULLDOZERS</h3><p>Construction units that help establish and expand your base.</p></div>
+        <div class="arsenal-item reveal"><span class="arsenal-no">02 / TRANSPORT</span><div class="unit-symbol">▰</div><h3>APCs</h3><p>Armored personnel carriers for your military roster.</p></div>
+        <div class="arsenal-item reveal"><span class="arsenal-no">03 / MECHANIZED</span><div class="unit-symbol">▣</div><h3>IFVs</h3><p>Infantry fighting vehicles that add flexibility to your force.</p></div>
+        <div class="arsenal-item reveal"><span class="arsenal-no">04 / ARMOR</span><div class="unit-symbol">▰</div><h3>MAIN BATTLE TANKS</h3><p>Armored combat units for direct engagements.</p></div>
+        <div class="arsenal-item reveal"><span class="arsenal-no">05 / FIRE SUPPORT</span><div class="unit-symbol">⌁</div><h3>MLRS SYSTEMS</h3><p>Rocket artillery systems that bring ranged firepower.</p></div>
+        <div class="arsenal-item reveal"><span class="arsenal-no">06 / DEFENSE</span><div class="unit-symbol">◇</div><h3>AIR DEFENSE</h3><p>Nation-specific defensive systems help protect your position.</p></div>
+        <div class="arsenal-item reveal"><span class="arsenal-no">07 / AIR POWER</span><div class="unit-symbol">✈</div><h3>AIRCRAFT</h3><p>Deploy aircraft to extend your reach and bring air power into the battle.</p></div>
+        <div class="arsenal-item reveal"><span class="arsenal-no">08 / ROTARY WING</span><div class="unit-symbol">✥</div><h3>HELICOPTERS</h3><p>Add Powers to your combined-arms strategy and battlefield operations.</p></div>
+        <div class="arsenal-item reveal"><span class="arsenal-no">09 / TEAM SPECIALIZATION</span><div class="unit-symbol">✧</div><h3>TEAM-EXCLUSIVE POWERS</h3><p>Upgrade team-specific superpowers and unlock specialized aircraft, rockets, and other capabilities unique to your chosen team.</p></div>
+      </div>
+      <div class="arsenal-showcase" aria-label="Prime Domination air and artillery gameplay screenshots">
+        <figure><img src="/images/game/image8.png" alt="Prime Domination multiple launch rocket system firing" loading="lazy" /><figcaption>ROCKET ARTILLERY</figcaption></figure>
+        <figure><img src="/images/game/image9.png" alt="Prime Domination air defense system in action" loading="lazy" /><figcaption>AIR DEFENSE</figcaption></figure>
+        <figure><img src="/images/game/image10.png" alt="Prime Domination military aircraft in flight" loading="lazy" /><figcaption>AIR POWER</figcaption></figure>
+        <figure><img src="/images/game/image11.png" alt="Prime Domination military power force" loading="lazy" /><figcaption>GENERAL POWER OPERATIONS</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="media section-pad" id="media">
+      <div class="section-kicker reveal"><span>06</span> / FIELD INTELLIGENCE</div>
+      <div class="section-title-row reveal">
+        <h2>SEE THE<br/><em>BATTLE UNFOLD.</em></h2>
+        <p>Get a closer look at the battlefields, base-building, military units, and large-scale strategy of Prime Domination.</p>
+      </div>
+      <div class="trailer-frame reveal">
+        <video controls preload="none" poster="/images/trailer-poster.svg">
+          <source src="/videos/prime-domination-trailer.mp4" type="video/mp4" />
+          Your browser does not support HTML video. <a href={steamUrl} target="_blank" rel="noopener noreferrer">View Prime Domination on Steam</a>.
+        </video>
+
+      </div>
+      <div class="screens-grid">
+        <figure class="screen-tile reveal"><img src="/images/game/image12.png" alt="Prime Domination in-game battlefield screenshot" loading="lazy" /><figcaption><span>FIELD REPORT 01</span><b>THE BATTLEFIELD</b></figcaption></figure>
+        <figure class="screen-tile reveal"><img src="/images/game/image13.png" alt="Prime Domination base building and military production screenshot" loading="lazy" /><figcaption><span>FIELD REPORT 02</span><b>BUILD & EXPAND</b></figcaption></figure>
+        <figure class="screen-tile reveal"><img src="/images/game/image14.png" alt="Prime Domination combined arms military units screenshot" loading="lazy" /><figcaption><span>FIELD REPORT 03</span><b>COMMAND YOUR FORCES</b></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="early-access section-pad" id="early-access">
+      <div class="early-panel reveal">
+        <div class="section-kicker"><span>07</span> / EARLY ACCESS ROADMAP</div>
+        <div class="early-layout">
+          <div><p class="micro-label">TARGETING MARCH—APRIL 2027</p><h2>READY FOR<br/><em>THE FIGHT.</em></h2><span class="release-note">A TARGET WINDOW, NOT A CONFIRMED DATE</span></div>
+          <div class="early-copy"><p>We are currently aiming to launch Prime Domination in Early Access around March or April 2027. This is an estimate, not a confirmed release date, and the timing may move slightly earlier or later as development progresses.</p><p>Our goal is to make Early Access a genuinely playable and enjoyable game from day one: build your base, manage your economy, command your army, play online with friends, or take on AI opponents on your own. We are also planning a small story-driven mode where you face a series of generals—defeat one on a battlefield, advance to another map, and take on the next.</p><p>We have been building the core foundation of Prime Domination first. From there, we want to grow the game together with its community. Player feedback will help guide new maps, teams, units, features, balance changes, quality-of-life improvements, optimization, and future content.</p><p>There is no fixed date for the full release. Early Access could last around two years, but the final transition will depend on the game’s progress and, most importantly, whether the community feels the game is ready. We want to move to full release when the experience is complete and players are satisfied—not simply when a calendar says so.</p><a class="text-link" href={steamUrl} target="_blank" rel="noopener noreferrer">FOLLOW THE EARLY ACCESS JOURNEY ON STEAM <span>↗</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="requirements section-pad" id="requirements">
+      <div class="section-kicker reveal"><span>08</span> / PC SPECIFICATIONS</div>
+      <div class="section-title-row reveal"><h2>PREPARE YOUR<br/><em>COMMAND CENTER.</em></h2><p>Check the currently published PC system requirements before joining the operation.</p></div>
+      <div class="specs reveal">
+        <div class="spec-column"><div class="spec-heading"><span>01</span><h3>MINIMUM</h3></div>
+          <dl><div><dt>Operating System</dt><dd>Windows 10 64-bit</dd></div><div><dt>Processor</dt><dd>Intel Core i5-6600 / AMD Ryzen 5 1600</dd></div><div><dt>Memory</dt><dd>8 GB RAM</dd></div><div><dt>Graphics</dt><dd>NVIDIA GTX 1050 Ti / AMD RX 570 (4 GB)</dd></div><div><dt>DirectX</dt><dd>Version 11</dd></div><div><dt>Storage</dt><dd>5 GB available space</dd></div><div><dt>Sound Card</dt><dd>DirectX-compatible sound card</dd></div></dl>
+        </div>
+        <div class="spec-column recommended"><div class="spec-heading"><span>02</span><h3>RECOMMENDED</h3></div>
+          <dl><div><dt>Operating System</dt><dd>Windows 10 / 11 64-bit</dd></div><div><dt>Processor</dt><dd>Intel Core i5-10400 / AMD Ryzen 5 3600</dd></div><div><dt>Memory</dt><dd>12 GB RAM</dd></div><div><dt>Graphics</dt><dd>NVIDIA RTX 2060 / AMD RX 6600 XT</dd></div><div><dt>DirectX</dt><dd>Version 12</dd></div><div><dt>Storage</dt><dd>5 GB available space</dd></div><div><dt>Sound Card</dt><dd>DirectX-compatible sound card</dd></div></dl>
+        </div>
+      </div>
+      <p class="spec-note">System requirements are based on the currently supplied Steam listing and may change during development.</p>
+    </section>
+
+    <section class="partners section-pad" id="partners">
+      <div class="section-kicker reveal"><span>09</span> / GROW WITH US</div>
+      <div class="partners-layout reveal">
+        <div><p class="micro-label">BECOME PART OF THE PRIME DOMINATION COMMUNITY</p><h2>BUILD THE<br/><em>COMMUNITY.</em></h2></div>
+        <div class="partners-copy"><p class="lead">We are looking for committed partners who want to help Prime Domination grow into a stronger game and a stronger community.</p><p>Partnership is about active contribution—not just adding a name to a list. We want people who can help bring players together, create visibility, share feedback, and make the community a better place.</p><div class="partner-paths"><article><span>01 / INVESTOR</span><h3>SUPPORT THE PROJECT</h3><p>Investors can help support development, growth, and marketing so we can reach more players and keep improving the game.</p></article><article><span>02 / CREATOR & COMMUNITY</span><h3>PLAY. CREATE. SHARE.</h3><p>Influencers, content creators, streamers, and active players can help introduce the game through videos, streams, gameplay, and community activity. Applicants should have an audience or a clear way to help share the game.</p></article></div><p>Partners will receive meaningful support and added opportunities within the community. We also plan to organize events for partners to host and run, with more partner benefits and opportunities expected as the game grows.</p><p>This partner intake is intended to be limited. It may close once the community reaches a later stage of growth; partners who join and remain active during the program are intended to continue with us as the project develops. Specific benefits and arrangements will be discussed with selected applicants.</p>{partnerApplicationUrl ? <a class="button button-primary" href={partnerApplicationUrl} target="_blank" rel="noopener noreferrer">APPLY TO BECOME A PARTNER <span>↗</span></a> : <span class="button button-primary partner-link-pending">PARTNER APPLICATION LINK WILL BE ADDED SOON</span>}</div>
+      </div>
+    </section>
+
+    <section class="faq section-pad" id="faq">
+      <div class="section-kicker reveal"><span>10</span> / INTELLIGENCE BRIEFING</div>
+      <div class="faq-layout">
+        <div class="reveal"><h2>QUESTIONS?<br/><em>ANSWERS.</em></h2><p class="faq-intro">A quick briefing on Prime Domination and what to expect.</p></div>
+        <div class="faq-list reveal">
+          <details><summary>What type of game is Prime Domination?<span>+</span></summary><p>Prime Domination is a modern military real-time strategy (RTS) game. Players build bases, manage finances, produce military units, and command forces in battles against AI opponents or other players.</p></details>
+          <details><summary>How many players can play together?<span>+</span></summary><p>Prime Domination supports multiplayer matches with up to 10 commanders. Players can create custom matches with human players and AI bots.</p></details>
+          <details><summary>Can I play against AI opponents?<span>+</span></summary><p>Yes. The game includes AI opponents, allowing players to take on computer-controlled forces as part of the available gameplay experience.</p></details>
+          <details><summary>Which factions and teams can I choose?<span>+</span></summary><p>Prime Domination features two main factions: the USA and Russia. You choose one specialized team under your selected faction. The USA teams are Vanguard, Air Superiority, Armored, and Mechanized. The Russian teams are Red Army, Rocket Forces, Armored Assault, and Rapid Response.</p></details>
+          <details><summary>What can I build in Prime Domination?</summary><p>Players can expand their base with Command Centers, Finance Buildings, Vehicle Production Facilities, and Power Plants. Buildings can be upgraded as you develop your economy and military infrastructure.</p></details>
+          <details><summary>Which military units are included?</summary><p>The military roster includes Bulldozers, APCs, IFVs, main battle tanks, MLRS rocket systems, air-defense systems, aircraft, and helicopters. The available roster and balance may evolve during development.</p></details>
+          <details><summary>When is the Early Access release planned?</summary><p>We are currently targeting March or April 2027 for Early Access. This is an estimated window, not a confirmed date, and may shift as development progresses.</p></details>
+          <details><summary>What will be playable in Early Access?</summary><p>Our goal is to launch Early Access as a substantial, playable experience with the core base-building, economy, army production, AI, and online multiplayer systems. You will be able to play with friends or against bots. We are also planning a small story mode in which you defeat a series of generals across different maps.</p></details>
+          <details><summary>How long will Early Access last?</summary><p>We do not have a fixed full-release date. Early Access could take around two years, but the timeline will depend on development progress and community feedback. We plan to move to full release when the game is ready and players are satisfied with the experience.</p></details>
+          <details><summary>Do teams have unique abilities?</summary><p>Each team is planned to have its own special power system. You will be able to upgrade your team’s power and unlock specialized capabilities, including team-exclusive aircraft or rocket options.</p></details>
+          <details><summary>How can I become a Prime Domination partner?</summary><p>We are looking for investors who can support development and marketing, as well as influencers, content creators, streamers, and community members who can help share the game and grow its audience. Partnership opportunities may include community support, partner-run events, and future benefits as the game grows. Applications will be limited.</p></details>
+          <details><summary>Where can I follow development or share feedback?</summary><p>Follow Prime Domination on Steam or join the official Discord community to get development news, share feedback, and connect with other commanders.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="cta-lines"></div>
+      <div class="final-content reveal"><p class="micro-label">THE BATTLEFIELD IS WAITING</p><h2>YOUR COMMAND.<br/><em>YOUR DOMINATION.</em></h2><p>Follow Prime Domination on Steam for development news, announcements, and release updates.</p><div class="hero-actions"><a class="button button-primary" href={steamUrl} target="_blank" rel="noopener noreferrer">VISIT PRIME DOMINATION ON STEAM <span>↗</span></a><a class="button button-ghost discord-link" href={discordUrl} target="_blank" rel="noopener noreferrer">JOIN THE COMMUNITY <span>↗</span></a></div></div>
+    </section>
+
+    <footer class="footer" id="community">
+      <a class="brand" href="#top"><span class="brand-mark">P<span>D</span></span><span class="brand-name">PRIME <b>DOMINATION</b></span></a>
+      <div class="footer-links"><a href={steamUrl} target="_blank" rel="noopener noreferrer">STEAM ↗</a><a class="discord-link" href={discordUrl} target="_blank" rel="noopener noreferrer">DISCORD ↗</a><a href="#top">BACK TO TOP ↑</a></div>
+      <p>© {new Date().getFullYear()} A16. PRIME DOMINATION. ALL RIGHTS RESERVED.</p>
+      <small>Prime Domination is a game in development. Features and content may change.</small>
+    </footer>
+  </main>
+</BaseLayout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What type of game is Prime Domination?","acceptedAnswer":{"@type":"Answer","text":"Prime Domination is a modern military real-time strategy game. Players build bases, manage finances, produce military units, and command forces in battles against AI opponents or other players."}},
+    {"@type":"Question","name":"How many players can play together?","acceptedAnswer":{"@type":"Answer","text":"Prime Domination supports multiplayer matches with up to 10 commanders. Players can create custom matches with human players and AI bots."}},
+    {"@type":"Question","name":"Which factions and teams can I choose?","acceptedAnswer":{"@type":"Answer","text":"Prime Domination features two main factions: the USA and Russia. The USA teams are Vanguard, Air Superiority, Armored, and Mechanized. The Russian teams are Red Army, Rocket Forces, Armored Assault, and Rapid Response."}},
+    {"@type":"Question","name":"Which military units are included?","acceptedAnswer":{"@type":"Answer","text":"The military roster includes Bulldozers, APCs, IFVs, main battle tanks, MLRS rocket systems, air-defense systems, aircraft, and helicopters."}},
+    {"@type":"Question","name":"When is the Early Access release planned?","acceptedAnswer":{"@type":"Answer","text":"Prime Domination is currently targeting March or April 2027 for Early Access. This is an estimated window, not a confirmed date, and may shift as development progresses."}},
+    {"@type":"Question","name":"What will be playable in Early Access?","acceptedAnswer":{"@type":"Answer","text":"The goal is to launch Early Access as a substantial playable experience with base building, economy management, army production, AI opponents, online multiplayer, and a planned small story mode where players defeat a series of generals across different maps."}},
+    {"@type":"Question","name":"How long will Early Access last?","acceptedAnswer":{"@type":"Answer","text":"There is no fixed full-release date. Early Access could take around two years, depending on development progress and community feedback. The game will move to full release when it is ready and players are satisfied."}},
+    {"@type":"Question","name":"Do teams have unique abilities?","acceptedAnswer":{"@type":"Answer","text":"Each team is planned to have its own special power system that players can upgrade to unlock specialized capabilities, including team-exclusive aircraft or rocket options."}}
+  ]
+}
+</script>
