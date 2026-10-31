@@ -3,7 +3,7 @@
 > Prime Domination is a modern military real-time strategy (RTS) game for PC, developed by A16.
 
 ## Official website
-https://YOUR-DOMAIN.com/
+https://primedomination.online/
 
 ## Game overview
 Prime Domination is a modern military RTS in which players build and expand military bases, manage their war economy, produce combined-arms forces, and command battles against AI opponents or other players. Online matches support up to 10 commanders. Players can play alone against bots or play online with friends.
