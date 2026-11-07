@@ -83,4 +83,4 @@
 @media(max-width:650px){.arsenal-showcase{grid-template-columns:1fr 1fr;gap:9px}.arsenal-showcase figcaption{font-size:10px}.screen-tile{aspect-ratio:1.8}}
 .hero-game-image{z-index:0}
 .multi-backdrop{opacity:1}
-.multi-backdrop img{opacity:.58}
+.multi-backdrop img{opacity:.2}
